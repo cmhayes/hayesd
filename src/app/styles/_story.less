@@ -1,0 +1,26 @@
+.story {
+    background-color: @storyGrey;
+
+    .story-graphs {
+        .story-graph {
+            float: none;
+        }
+
+        .intro:first-letter {
+            font-size: 4.5rem;
+            font-weight: bold;
+        }
+
+        .graph-dividers {
+            margin-top: 25px;
+            margin-bottom: 25px;
+
+            .graph-divider {
+                .setSize(10px, 10px);
+                display: inline-block;
+                background: @baseBlue;
+                transform: rotate(45deg) skew(15deg, 15deg);
+            }
+        }
+    }
+}

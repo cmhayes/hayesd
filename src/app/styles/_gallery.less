@@ -1,0 +1,36 @@
+.gallery {
+    background-color: @footerBlue;
+    overflow: hidden;
+
+    @media (max-device-width: 667px) {
+        min-height: 10vh;
+    }
+
+    .gallery-row {
+        width: 500%;
+
+        @media (max-width: 768px) {
+            width: 1200%;
+        }
+    }
+    .gallery-image {
+        position: relative;
+        width: 20vw;
+        margin: 0 5px;
+        animation: bannermove 30s linear infinite;
+        left: -3%;
+
+        @media (max-device-width: 667px) {
+            width: 40vw;
+        }
+    }
+
+    @keyframes bannermove {
+        0% {
+            left: -3%;
+        }
+        100% {
+            left: -71.65%;
+        }
+    }
+}

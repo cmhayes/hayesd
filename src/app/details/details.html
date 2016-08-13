@@ -1,0 +1,29 @@
+<section id="details-anchor" class="row locations">
+    <h1 class="section-header">Event Details</h1>
+    <div class="row text-center">
+        <button class="col-xs-5 col-sm-2 btn btn-info location-role"
+             ng-repeat="location in vm.locations track by $index"
+             ng-click="vm.setLocation(location)"
+             ng-class="{'col-sm-offset-4': $first, 'col-xs-offset-1': $first}"
+             ng-bind="location.role">
+        </button>
+    </div>
+    <div class="row">
+        <div class="col-sm-6 location">
+            <h2 ng-bind="vm.currentLocation.name"></h2>
+            <h4>
+                <a ng-href="https://www.google.com/maps/dir/''/{{vm.currentLocation.map}}" ng-bind="vm.currentLocation.address"></a>
+            </h4>
+            <div>
+                <p class="text-justify location-details" ng-bind="vm.currentLocation.details"></p>
+            </div>
+        </div>
+        <div class="col-sm-6 event-photo">
+            <div class="thumbnail">
+                <img class="current-image" ng-src="{{vm.currentImage.img}}">
+                <div class="caption text-center" ng-bind="vm.currentImage.caption">Ceremony by the pond.</div>
+            </div>
+        </div>
+    </div>
+
+</section>

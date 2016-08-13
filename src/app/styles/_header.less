@@ -1,0 +1,44 @@
+.header {
+    height: 80vh;
+    overflow: hidden;
+    position: relative;
+    background: url(//s3.amazonaws.com/finallyhayesd.us/assets/images/engagement-77.jpg) no-repeat bottom fixed;
+    background-size: 100%;
+
+    @media (max-device-width: 667px) and (orientation: portrait) {
+        background-size: 200%;
+        background-position: top;
+    }
+
+    @media (max-device-width: 667px) and (orientation: landscape) {
+        background-position: 0px -100px;
+    }
+
+    .engage-photo-filter {
+        .setSize(100%, 100%);
+        background-color: fade(black, 30%);
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .wedding-date {
+            position: relative;
+            top: 60%;
+            font: 10rem 'Quicksand-Lite', sans-serif;
+
+            @media (max-width: 768px) {
+                font-size: 5rem;
+            }
+        }
+
+        .hashtag {
+            position: relative;
+            top: 60%;
+            font-size: 4rem;
+
+            @media (max-width: 768px) {
+                font-size: 2rem;
+            }
+        }
+    }
+}

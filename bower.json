@@ -1,0 +1,32 @@
+{
+  "name": "hayesd",
+  "main": [
+    "/dist/hayesd.min.js",
+    "/dist/hayesd.min.css"
+  ],
+  "version": "0.1.0",
+  "ignore": [
+    "**/.*",
+    "package.json",
+    "klei.json",
+    "gulpfile.js",
+    "node_modules",
+    "bower_components",
+    "src"
+  ],
+  "dependencies": {
+    "lodash": "~4.0.x",
+    "angular": "~1.5.x",
+    "angular-route": "~1.5.x",
+    "ngFlowGrid": "~1.0.2",
+    "bootstrap": "~3.3.6",
+    "angular-animate": "~1.5.7",
+    "fastclick": "~1.0.6"
+  },
+  "devDependencies": {
+    "angular-mocks": "~1.5.x"
+  },
+  "resolutions": {
+    "angular": "1.5.7"
+  }
+}

@@ -1,0 +1,49 @@
+<div id="rsvp" class="modal fade rsvp-form" role="dialog" ng-controller="RsvpCtrl as vm" ng-click="vm.resetForm()">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h3 class="modal-title text-center">RSVP</h3>
+      </div>
+      <div class="modal-body" ng-hide="vm.submitted">
+        <form name="vm.rsvpForm">
+            <div class="form-group text-center">
+                <label class="control-label">Will you be attending?</label>
+                <input type="radio" name="Attending" value="true" ng-model="guest.isAttending" required> Yes
+                <input type="radio" name="Attending" value="false" ng-model="guest.isAttending"> No
+            </div>
+            <div class="form-group">
+                <label class="control-label">Who are you?</label>
+                <input class="form-control" type="text" name="Name" placeholder="Geraldo" ng-model="guest.name" required>
+            </div>
+            <h4 class="if-so"><strong>If so...</strong></h4>
+            <div class="form-group">
+                <label class="control-label">How can we get in touch?</label>
+                <input class="form-control" type="email" name="Email" placeholder="geraldo@gmail.com" ng-model="guest.email">
+            </div>
+            <div class="form-group">
+                <label class="control-label">Anyone coming with you?</label>
+                <input class="form-control" type="text" name="Guests" placeholder="+1 or family" ng-model="guest.guests">
+            </div>
+            <div class="form-group">
+                <label class="control-label">Anything you would like to hear?</label>
+                <input class="form-control" type="text" name="Songs" placeholder="Mmmbop, Cupid Shuffle, Electric Slide" ng-model="guest.songs">
+            </div>
+            <input type="text" name="_gotcha" style="display:none">
+            <div class="form-group"><input class="btn submit-rsvp" type="submit" value="Send" ng-click="vm.submitRsvp(guest)"></div>
+        </form>
+      </div>
+      <div class="modal-body" ng-show="vm.submitted">
+        <div class="text-center">
+            <span class="glyphicon glyphicon-ok" ng-if="vm.response.success"></span>
+        </div>
+        <div class="text-center">
+            <span class="glyphicon glyphicon-refresh" ng-if="!vm.response.success"></span>
+        </div>
+        <div class="text-center">
+            <span ng-bind="vm.response.msg"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

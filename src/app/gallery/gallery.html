@@ -1,0 +1,5 @@
+<section class="gallery">
+    <div class="gallery-row">
+        <img class="gallery-image" ng-repeat="image in vm.gallery track by $index" ng-class="{first: $first}" ng-src="{{image}}">
+    </div>
+</section>

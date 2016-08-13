@@ -1,0 +1,39 @@
+<section id="party-anchor" class="row party">
+    <h1 class="section-header">Meet the Wedding Party</h1>
+    <div class="col-sm-6 bridal-party">
+        <div class="hidden-xs media bridesmaids" ng-repeat="girl in vm.bridesmaids track by $index">
+            <div class="media-left media-middle">
+                <img class="media-object party-photo" ng-src="//s3.amazonaws.com/finallyhayesd.us/assets/images/{{girl.fname}}.jpg">
+            </div>
+            <div class="media-body">
+                <h4 class="media-heading"><strong>{{girl.fname}} {{girl.lname}}</strong> | {{girl.role}}</h4>
+                <p ng-bind="girl.details"></p>
+            </div>
+        </div>
+        <div class="visible-xs" ng-repeat="girl in vm.bridesmaids track by $index">
+            <img class="center-block party-photo" ng-src="//s3.amazonaws.com/finallyhayesd.us/assets/images/{{girl.fname}}.jpg">
+            <div class="center-block text-justify">
+                <h4 class="media-heading"><strong>{{girl.fname}} {{girl.lname}}</strong> | {{girl.role}}</h4>
+                <p ng-bind="girl.details"></p>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 grooms-party">
+        <div class="hidden-xs media groomsmen" ng-repeat="guy in vm.groomsmen track by $index">
+            <div class="media-body text-right">
+                <h4 class="media-heading"><strong>{{guy.fname}} {{guy.lname}}</strong> | {{guy.role}}</h4>
+                <p ng-bind="guy.details"></p>
+            </div>
+            <div class="media-right media-middle">
+                <img class="media-object party-photo" ng-src="//s3.amazonaws.com/finallyhayesd.us/assets/images/{{guy.fname}}.jpg">
+            </div>
+        </div>
+        <div class="visible-xs" ng-repeat="guy in vm.groomsmen track by $index">
+            <img class="center-block party-photo" ng-src="//s3.amazonaws.com/finallyhayesd.us/assets/images/{{guy.fname}}.jpg">
+            <div class="center-block text-justify">
+                <h4 class="media-heading"><strong>{{guy.fname}} {{guy.lname}}</strong> | {{guy.role}}</h4>
+                <p ng-bind="guy.details"></p>
+            </div>
+        </div>
+    </div>
+</section>

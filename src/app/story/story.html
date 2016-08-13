@@ -1,0 +1,12 @@
+<section id="story-anchor" class="row story">
+    <h1 class="section-header">Our Story</h1>
+    <div class="story-graphs" ng-repeat="graph in vm.story track by $index">
+        <p class="col-sm-8 col-sm-offset-2 story-graph" ng-class="{intro: $first}" ng-bind="graph.type"></p>
+        <div class="text-center graph-dividers" ng-if="!$last">
+            <div class="graph-divider"></div>
+            <div class="graph-divider"></div>
+            <div class="graph-divider"></div>
+        </div>
+    </div>
+</section>
+

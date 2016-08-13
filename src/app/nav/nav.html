@@ -1,0 +1,21 @@
+<nav ng-class="{'show-nav': vm.showNav}">
+    <div class="external-rsvp" data-toggle="modal" data-target="#rsvp">
+        <span class="hidden-xs">RSVP</span>
+        <span class="visible-xs glyphicon glyphicon-envelope"></span>
+    </div>
+    <div class="menu-container" ng-click="vm.toggleNav()">
+        <button class="hamburger hamburger--squeeze" type="button" ng-class="{'is-active': vm.showNav}">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+    <div class="link-container">
+        <div class="col-sm-12 text-center link-group" ng-repeat="l in vm.links track by $index">
+            <div class="nav-link" ng-bind="l.text" ng-click="vm.scrollTo(l.href)"></div>
+        </div>
+        <span class="nav-link" data-toggle="modal" data-target="#rsvp">RSVP</span>
+    </div>
+    <div class="coming-soon" ng-bind="vm.comingSoon"></div>
+    <footer>Copyright &copy;<span ng-bind="vm.currentYear"></span> Hayes </footer>
+</nav>
