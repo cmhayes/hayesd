@@ -24,7 +24,6 @@
                         'Accept': 'application/json'
                     }
                 }).then(function() {
-                    console.log(guest.isAttending === 'false');
                     vm.submitted = true;
                     vm.response = {
                         success: true,
