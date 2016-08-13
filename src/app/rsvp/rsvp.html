@@ -1,4 +1,4 @@
-<div id="rsvp" class="modal fade rsvp-form" role="dialog" ng-controller="RsvpCtrl as vm" ng-click="vm.resetForm()">
+<div id="rsvp" class="modal fade rsvp-form" role="dialog" ng-controller="RsvpCtrl as vm">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -37,7 +37,7 @@
         <div class="text-center">
             <span class="glyphicon glyphicon-ok" ng-if="vm.response.success"></span>
         </div>
-        <div class="text-center">
+        <div class="text-center" ng-click="vm.resetForm()">
             <span class="glyphicon glyphicon-refresh" ng-if="!vm.response.success"></span>
         </div>
         <div class="text-center">

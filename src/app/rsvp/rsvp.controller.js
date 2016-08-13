@@ -5,20 +5,16 @@
         var vm = this;
 
         vm.submitted = false;
-        vm.fields = rsvpConstants.FORM_FIELDS;
-        vm.guest = {}; //placeholder object for rsvp
 
         vm.resetForm = function() {
             if (!vm.submitted) {
                 return false;
             }
 
-            vm.guest = {};
             vm.submitted = false;
         };
 
         vm.submitRsvp = function(guest) {
-            console.log(vm.rsvpForm);
             if (vm.rsvpForm.$valid) {
                 $http({
                     method: 'POST',
@@ -28,13 +24,13 @@
                         'Accept': 'application/json'
                     }
                 }).then(function() {
+                    console.log(guest.isAttending === 'false');
                     vm.submitted = true;
                     vm.response = {
                         success: true,
-                        msg: vm.guest.isAttending ? rsvpConstants.SUCCESS_MSG : rsvpConstants.NOT_ATTENDING
+                        msg: guest.isAttending === 'false' ? rsvpConstants.NOT_ATTENDING : rsvpConstants.SUCCESS_MSG
                     };
-                    vm.resetForm();
-                }).catch(function() {
+                }).catch(function(error) {
                     vm.submitted = true;
                     vm.response = {
                         success: false,
