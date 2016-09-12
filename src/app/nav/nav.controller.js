@@ -14,8 +14,6 @@
         var date = new Date();
         vm.currentYear = $filter('date')(date, 'yyyy');
 
-        vm.comingSoon = 'Coming Soon - Gift Registry';
-
         vm.links = [
             {
                 text: 'Our story',
@@ -28,6 +26,10 @@
             {
                 text: 'Event Details',
                 href: '#details-anchor'
+            },
+            {
+                text: 'Registry',
+                href: '#registry-anchor'
             }
         ];
     };

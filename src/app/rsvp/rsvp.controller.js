@@ -29,7 +29,7 @@
                         success: true,
                         msg: guest.isAttending === 'false' ? rsvpConstants.NOT_ATTENDING : rsvpConstants.SUCCESS_MSG
                     };
-                }).catch(function(error) {
+                }).catch(function() {
                     vm.submitted = true;
                     vm.response = {
                         success: false,
